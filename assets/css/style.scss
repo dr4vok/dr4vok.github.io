@@ -1,0 +1,24 @@
+---
+---
+@import "minima";
+
+@font-face {
+    font-family: 'title';
+    src: url('../fonts/Karma Future.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'article';
+    src: url('../fonts/unifont-17.0.04.otf') format('opentype');
+}
+
+body {
+    background-color: #656565 !important;
+    font-family: 'article', sans-serif !important;
+    color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'title', sans-serif !important;
+    color: #ffffff !important;
+}
