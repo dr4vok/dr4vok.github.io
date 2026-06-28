@@ -1,3 +1,2 @@
-remote_theme: jekyll/minima
-plugins:
-  - jekyll-remote-theme
+theme: minima
+title: Dr4vok's Blog
