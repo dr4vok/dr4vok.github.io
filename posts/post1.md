@@ -45,8 +45,8 @@ Finally, I would like to thank you for reading this. I hope you have a wonderful
 
 **Resources**
 
-OS : [[https://en.wikipedia.org/wiki/Operating_system]]
-Kernel : [[https://en.wikipedia.org/wiki/Kernel_(operating_system)]] && **Linux Kernel Development by Book by Robert Love**
-bootloader : [[https://en.wikipedia.org/wiki/Bootloader]]
-device drivers : [[https://en.wikipedia.org/wiki/Device_driver]]
+OS : [[https://en.wikipedia.org/wiki/Operating_system]] \ 
+Kernel : [[https://en.wikipedia.org/wiki/Kernel_(operating_system)]] && **Linux Kernel Development by Book by Robert Love** \
+bootloader : [[https://en.wikipedia.org/wiki/Bootloader]] \
+device drivers : [[https://en.wikipedia.org/wiki/Device_driver]] \
 system utilities : [[https://www.lenovo.com/us/en/glossary/utility-software/]]
