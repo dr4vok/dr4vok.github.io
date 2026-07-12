@@ -61,17 +61,17 @@ there are sets of file descriptors open in a process U can access under the path
 
 U can see the open files on ur linux machine by using `lsof` like this
 ```shell
-# lsof
-COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME
-systemd 1 root cwd DIR 8,1 4096 2 /
-systemd 1 root rtd DIR 8,1 4096 2 /
-systemd 1 root txt REG 8,1 1595792 9961784 /lib/systemd/systemd
-systemd 1 root mem REG 8,1 1700792 9961570 /lib/x86_64-linux-gnu/libm-2.27.so
-systemd 1 root mem REG 8,1 121016 9961695 /lib/x86_64-linux-gnu/libudev.so.1
---snip--
-vi 1994 juser cwd DIR 8,1 4096 4587522 /home/juser
-vi 1994 juser 3u REG 8,1 12288 786440 /tmp/.ff.swp
---snip--
+[dr4vok@host1 ~]$ sudo lsof
+COMMAND     PID   TID TASKCMD               USER  FD      TYPE             DEVICE    SIZE/OFF       NODE NAME
+systemd       1                             root cwd       DIR              259,2        4096          2 /
+systemd       1                             root rtd       DIR              259,2        4096          2 /
+systemd       1                             root txt       REG              259,2      172056    4745165 /usr/lib/systemd/systemd
+systemd       1                             root mem       REG              259,2      157648    4733717 /usr/lib/libaudit.so.1.0.0
+systemd       1                             root mem       REG              259,2      182288    4736320 /usr/lib/libseccomp.so.2.6.0
+systemd       1                             root mem       REG              259,2      939976    4734501 /usr/lib/libzstd.so.1.5.7
+systemd       1                             root mem       REG              259,2      104464    4725429 /usr/lib/libz.so.1.3.2
+systemd       1                             root mem       REG              259,2      436344    4747224 /usr/lib/libbpf.so.1.7.0
+
 ```
 The output lists the following fields in the top row:
 ```shell
@@ -95,12 +95,11 @@ _check the manual page of lsof to get most of it, this is just a demonstration t
 _Note: i got this part from book how linux works. i got into problem that my terminal doesnt show the first column because of the scroll limit.do i want to edit the settings of my terminal? absolute not, im too lazy for this, so i just did this `sudo lsof | less` and voala u can now move with ur arrow key up and down and search by typing /. dm my insta if u want me to make `less` command tutorial_
 
 
-##### **Now lets get into "pending signals" part**
+##### LETS CONTINUE
 
-What is signals? (i will use the description from the Advanced programming in the UNIX env book because this is the open tab right now)
+**What is signals**? _(i will use the description from the Advanced programming in the UNIX env book because this is the open tab right now)_
 So signals are software used to interrupt. It also provides a way of handling events such as terminating , alarming and such more
 
-**Okay its been allot and you will probably got overwhelmed because all of this information so i will speed run the rest;**
 
 **processor state** -> The state field of the process descriptor describes the current condition of the process
 Each process on the system is in exactly one of **5 different states** 
@@ -117,10 +116,15 @@ Each process on the system is in exactly one of **5 different states**
 -  `__TASK_STOPPED` : Process execution has stopped ; the task is not running nor its eligible to run , this occurs if the  task receives the `SIGSTOP`, `SIGTSTP`, `SIGTTIN`, or `SIGTTOU` signal or if it receives any signal while it is being debugged. 
 
 
-**One or more threads of execution** -> threads of executio (shortened to threads)  are the objects of activity within the process
+**One or more threads of execution** -> threads of executio (shortened to threads)  are the objects of activity within the process (threads are not the current topic so i will only give the definition)
+
+
 
 
 **THAT WAS ALLOT, THX FOR STICKING AROUND!!**
+
+
+
 
 **Resources**:
 https://www.geeksforgeeks.org/linux-unix/processes-in-linuxunix/ \
