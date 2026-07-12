@@ -92,7 +92,7 @@ NAME: The filename.
 
 _check the manual page of lsof to get most of it, this is just a demonstration to see ur open files_
 
-_Note: i got this part from book how linux works. i got into problem that my terminal doesnt show the first column because of the scroll limit.do i want to edit the settings of my terminal? absolute not, im too lazy for this, so i just did this `sudo lsof | less` and voala u can now move with ur arrow key up and down and search by typing /. dm my insta if u want me to make `less` command tutorial_
+_Note: i got into problem that my terminal doesnt show the first rows because of the scroll limit.do i want to edit the settings of my terminal? absolute not, im too lazy for this, so i just did this `sudo lsof | less` and voala u can now move with ur arrow key up and down and search by typing /. dm my insta if u want me to make `less` command tutorial_
 
 
 ##### LETS CONTINUE
