@@ -36,8 +36,8 @@ File Descriptors are part of the POSIX API, Each process should have three stand
 
 _Note: POSIX or Portable Operating System Interface are just some standards, check https://en.wikipedia.org/wiki/POSIX for more info_ 
 
-0 -> stdin (standard input)
-1 -> stdout (standard output)
+0 -> stdin (standard input) \
+1 -> stdout (standard output) \
 2 -> stderr (standard error)
 
 Frankly talking, the daemons are rare exception where in traditional SysV daemon it close all open FD except stdin , stdout and error (this ensures that no accidentally passed file descriptor stays around in the daemon process). later in step 9 it connects  /dev/null to stdin and stdout and error
@@ -123,10 +123,10 @@ Each process on the system is in exactly one of **5 different states**
 **THAT WAS ALLOT, THX FOR STICKING AROUND!!**
 
 **Resources**:
-https://www.geeksforgeeks.org/linux-unix/processes-in-linuxunix/
-Linux kernel development book by Robert's love 
-How linux works what every super user should know 3rd edition
-Advanced Programming in the UNIX Environment by W. Richard Stevens
-https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html
-https://en.wikipedia.org/wiki/File_descriptor
+https://www.geeksforgeeks.org/linux-unix/processes-in-linuxunix/ \
+Linux kernel development book by Robert's love \
+How linux works what every super user should know 3rd edition \
+Advanced Programming in the UNIX Environment by W. Richard Stevens \
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html \
+https://en.wikipedia.org/wiki/File_descriptor \
 https://man7.org/linux/man-pages/man7/daemon.7.html
